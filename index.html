@@ -9,7 +9,19 @@
         <p>Tên đăng nhập</p>
         <input id="username" placeholder="txtUsername" />
         <p>Mật khẩu</p>
-        <input id="password" placeholder="txtPassword" />
-        <button>Đăng nhập</button>
+        <input id="password" type="password" placeholder="txtPassword" />
+        <button onclick="checkLogin()">Đăng nhập</button>
     </body>
+    <script>
+        function checkLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin") {
+                window.location.href = "LoginSuccess.html";
+            } else {
+                alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
+            }
+        }
+    </script>
 </html>
